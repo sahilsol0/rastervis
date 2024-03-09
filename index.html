@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Visualisation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header-wrapper">
+    <h2>Raster Algorithms</h2>
+  </header>
+  <div class="wrapper">
+    <div id="grid"></div>
+    <div class="input-wrapper">
+      <button id="random-btn" type="button">random points</button>
+      <div class="points-wrapper">
+        <input type="text" name="points" id="points" placeholder="enter x1,y1,x2,y2 separated by comma">
+      </div>
+    </div>
+    <div class="speed-wrapper">
+      <p>Speed 🐢</p>
+      <div class="range-slider">
+        <input type="range" name="speed" id="speed" max=8 min="1">
+      </div>
+      <p>🐇</p>
+    </div>
+    <div id="algo-content">
+      
+    </div>
+  </div>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
