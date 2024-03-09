@@ -35,7 +35,7 @@ body {
 }
 
 #grid {
-  width: 400px;
+  width: 500px;
   aspect-ratio: 1;
   grid-gap: 1px;
 }
@@ -73,5 +73,8 @@ p {
 @media screen and (max-width: 780px) {
   .wrapper {
     display: grid;
+  }
+  #grid {
+    width: 300px;
   }
 }
