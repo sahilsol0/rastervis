@@ -21,9 +21,9 @@ body {
 }
 
 .wrapper {
-  display: grid;
+  display: flex;
   /**padding: var(--margin);**/
-  align-items: center;
+  align-items: top;
   justify-items: center;
   padding: 0 var(--margin) 0 var(--margin);
   grid-gap: var(--margin);
@@ -35,22 +35,19 @@ body {
 }
 
 #grid {
-  width: calc(100%);
+  width: 400px;
   aspect-ratio: 1;
+  grid-gap: 1px;
 }
 
 #points {
   width: 250px;
 }
 
-.cells {
-  border: 1px solid var(--color);
-}
-
 .speed-wrapper {
   display: flex;
   align-items: center;
-  height: 20px;
+  height: 30px;
 }
 
 .highlighted1 {
@@ -71,4 +68,10 @@ li{
 
 p {
   font-size: 1em;
+}
+
+@media screen and (max-width: 780px) {
+  .wrapper {
+    display: grid;
+  }
 }
