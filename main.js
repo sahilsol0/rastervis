@@ -86,6 +86,10 @@ async function ddaLine(x1, y1, x2, y2) {
   ol.lastChild.lastChild.classList.add("highlighted2");
 }
 
+function midPtLine(x1,y1,x2,y2) {
+  
+}
+
 drawGrid(HEIGHT, cell, grid);
 
 randomBtn.addEventListener("click",(e) => {
