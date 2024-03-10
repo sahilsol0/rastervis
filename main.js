@@ -115,33 +115,32 @@ async function midPtLine(x1,y1,x2,y2) {
 async function bresenhamLine(x1,y1,x2,y2) {
 
   let slope = (y2-y1)/(x2-x1)
-  
-  if (Math.abs(slope) < 1) {
-    algoContent.innerHTML = "Slope < 1...Bresenham line algorithm won't work!!!"
-  } else {
-    
+  console.log(slope);
+  if (slope <= 1 && slope >= 0) {
     let deltaX = x2 - x1
     let deltaY = y2 - y1
     let doubleDeltaY = 2 * deltaY
-    let doubleDeltaYX = 2 * (deltaY - deltaX)
+    let doubleDeltaYX = doubleDeltaY - 2 * deltaX
     
     let p = doubleDeltaY - deltaX
-    let x = x1, y = y1
+    let y = y1
     
+    console.log(deltaX, deltaY, doubleDeltaY, doubleDeltaYX);
     algoContent.innerHTML = ''
     
-    for (let index = 0; index < deltaX; index++) {
+    for (let x = x1+1; x < x2; x++) {
       if (p < 0) {
-        x++
-        p += 2 * doubleDeltaY
+        p += doubleDeltaY
       } else {
-        x++
         y++
         p += doubleDeltaYX
       }
       await sleep(delay)
       drawPoint(x,y,color[2])
     }
+  } else {
+    algoContent.innerHTML = "Slope m > 1 or m < 0...Bresenham line algorithm won't work!!!"
+    
   }
 
   
