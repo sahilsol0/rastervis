@@ -127,6 +127,7 @@ async function bresenhamLine(x1,y1,x2,y2) {
     
     console.log(deltaX, deltaY, doubleDeltaY, doubleDeltaYX);
     algoContent.innerHTML = ''
+    algoContent.innerHTML = `Constants needed: <li>∆x = ${deltaX}</li><li>∆y = ${deltaY}</li><li>2∆y = ${doubleDeltaY}</li><li>2∆xy = ${doubleDeltaYX}</li>`
     
     for (let x = x1+1; x < x2; x++) {
       if (p < 0) {
